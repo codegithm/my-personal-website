@@ -1,0 +1,82 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html, body {
+    height: 100%;
+    background-image: url("back2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px 140px 100px auto 50px;
+    grid-template-areas: 
+    ". a a a a . . . b c d ."
+    ". e e e e e e . . . . ."
+    ". . . . . . . . . . . ."
+    ". f f f g g g h h h . ."
+    "j j j j j j j j j j j j";
+}
+a{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+p,a,h1,h2, .footer{
+    color: white;
+}
+h2{
+    margin-bottom: 20px;
+}
+.name{
+    grid-area: a;
+}
+.home{
+    grid-area: b;
+}
+.github{
+    grid-area: c;
+   
+}
+.contact{
+    grid-area: d;
+}
+.heading{
+    grid-area: e;
+    margin-top: 100px;
+    margin-bottom: 250px;
+}
+.skill{
+    grid-area: f;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.experience{
+    grid-area: g;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.education{
+    grid-area: h;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.footer{
+    grid-area: j;
+    text-align: center;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: rotateY(-50%);
+}
