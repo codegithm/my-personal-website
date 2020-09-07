@@ -7,18 +7,25 @@ html, body {
     background-image: url("back2.jpg");
     background-size: cover;
     background-attachment: fixed;
+    font-family: sans-serif;
+}
+.name img{
+    width: 160px;
+    height: 90px;
 }
 .container{
     height: 100%;
     display: grid;
+    grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 60px 140px 100px auto 50px;
+    grid-template-rows: 40px 100px 100px auto auto 80px 70px;
     grid-template-areas: 
-    ". a a a a . . . b c d ."
+    ". a a a a a a a b c d ."
     ". e e e e e e . . . . ."
     ". . . . . . . . . . . ."
     ". f f f g g g h h h . ."
-    "j j j j j j j j j j j j";
+    ". l l l m m m . . . . ."
+    "k k k k k k k k k k k k";
 }
 a{
     padding: 0;
@@ -28,24 +35,50 @@ a{
     top: 50%;
     transform: translateY(-50%);
 }
-p,a,h1,h2, .footer{
+p,a,h1,h2{
     color: white;
 }
+.action a{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+h1,h2,a{
+    font-family: Arial, Helvetica, sans-serif;
+}
 h2{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+h3{
+    display: block;
+    color: white;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial, Helvetica, sans-serif;
 }
 .name{
     grid-area: a;
+    position: sticky;
+    top: 0;
 }
 .home{
     grid-area: b;
+    position: sticky;
+    top: 0;
 }
 .github{
     grid-area: c;
+    position: sticky;
+    top: 0;
    
 }
 .contact{
     grid-area: d;
+    position: sticky;
+    top: 0;
 }
 .heading{
     grid-area: e;
@@ -56,27 +89,81 @@ h2{
     grid-area: f;
     text-align: left;
     padding-left: 15px;
-    font-size: 20px;
+    font-size: 1.2em;
 }
-.experience{
+.languages{
     grid-area: g;
     text-align: left;
     padding-left: 15px;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 .education{
     grid-area: h;
     text-align: left;
     padding-left: 15px;
-    font-size: 20px;
+    font-size: 1.2em;
 }
-.footer{
-    grid-area: j;
+.bio{
+    grid-area: l;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 1.2em;
+}
+.personal{
+    grid-area: m;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 1.2em;
+}
+.button{
+    grid-area: k;
     text-align: center;
-    position: fixed;
     margin: 0;
     padding: 0;
     position: relative;
     top: 50%;
     transform: rotateY(-50%);
+    margin-bottom: 0;
+   
+
+}
+.project{
+    align-items: center;
+    border-style: none;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(35, 130, 141);
+    padding: 13px 13px 13px 13px;
+}
+.action:hover {
+    background: rgb(35, 130, 141);
+}.action a :active{
+    background: #f00;
+}
+li{
+    list-style: none;
+    color: white;
+}
+button a{
+    text-decoration: none;
+}
+
+@media only screen and (max-width:540px){
+    .container{
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.8fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+        grid-template-areas: 
+        "a b c d"
+        "e e e e"
+        "f f f f"
+        "g g g g"
+        "h h h h"
+        "l l l l"
+        "m m m m"
+        "k k k k";
+    }
+    .heading{
+        margin-bottom: 50px;
+    }
 }
